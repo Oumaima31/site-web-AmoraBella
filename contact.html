@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cont.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>AmoraBella</h1>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#shop">Shop</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="boucles.html">Boucles d'oreilles</a></li>
+                            <li><a href="collier.html">Colliers</a></li>
+                            <li><a href="bracler.html">Bracelets</a></li>
+                            <li><a href="montre.html">Montres</a></li>
+                            <li><a href="bagues.html">Bagues</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="header-right">
+                    <form class="search-bar" action="/search" method="get">
+                        <input type="text" placeholder="Rechercher..." name="search">
+                        
+                    </form>
+                    <a href="compte.html">Mon Compte</a>
+                    <a href="#panier">Panier</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Écrivez <strong>nous</strong></h2>
+            <br>
+            <form>
+                <label for="name">Nom *</label>
+                <input type="text" id="name" placeholder="Nom" required>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="Email" required>
+
+                <label for="phone">Numéro de téléphone</label>
+                <input type="tel" id="phone" placeholder="Numéro de téléphone">
+
+                <label for="message">Comment pouvons-nous vous aider ? *</label>
+                <textarea id="message" rows="5" placeholder="Votre message..." required></textarea>
+
+                <button type="submit">ENVOYER</button>
+            </form>
+        </div>
+        <div class="contact-details">
+            <h1>AmoraBella</h1>
+            <br><br><br>
+            <h3>Contact <strong>Details :</strong></h3>
+            <br>
+            <p><strong>Téléphone :</strong> 20 362 681</p>
+            <br>
+            <p><strong>Email :</strong> contact[@]AmoraBella.com.tn</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>

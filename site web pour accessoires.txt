@@ -1,0 +1,89 @@
+_site pour accessoires: acheter, voir les bijeaux
+_bijeaux: boucles d'oreilles,Colliers,Bracelets,Montres,Bagues
+_pour la partie de recherche pour un visiteur ou utilisateur: peut chercher des bijeaux d'apres le type(nom) ou si il ya un solde
+
+
+-administrateur :
+	-ajouter article
+	-mise a jour
+	-supprimer(ecrit solder)
+	-Gérer les détails des produits:description, prix, images, stock, catégories, et options de personnalisation.
+	-Gestion des commandes:Visualiser les commandes passées.Mettre à jour le statut des commandes (en préparation, expédiée, livrée).
+	Envoyer des notifications aux utilisateurs pour le suivi de leur commande.
+	-Gestion des utilisateursVisualiser et gérer les comptes des utilisateurs (clients).Suspendre ou supprimer des comptes en cas de comportement inapproprié.
+	-Gestion des promotions:Créer et appliquer des codes de réduction ou des promotions.Gérer des offres spéciales pour certaines catégories ou certains produits.
+
+
+-utilisateur:
+	-Parcourir et rechercher des bijoux
+	-Créer un compte et se connecter
+	-Ajouter des articles au panier
+	-Passer une commande
+	-Suivre les commandes :Consulter l’état de leurs commandes (en préparation, expédiée, livrée).Recevoir des notifications par e-	mail pour chaque étape de la commande.
+
+
+-classe:
+	utilisateur
+	article
+	Commande
+	admin
+	Panier
+
+	-Utilisateur possède un Panier
+	Utilisateur passe une Commande
+	Commande contient plusieurs Articles
+	Admin peut gérer plusieurs Articles et plusieurs Commandes
+
+
+1. Diagramme de Séquence : Passer une commande
+Acteurs :
+
+Utilisateur : Effectue l'achat d'un article.
+Système : Gère les actions côté serveur pour le panier, la commande et le paiement.
+Service de Paiement : Gère les transactions de paiement.
+Description des étapes :
+L'utilisateur consulte les articles et ajoute un article au panier.
+Le système affiche les détails du panier avec les articles sélectionnés.
+L'utilisateur valide le panier pour passer à la commande.
+Le système affiche la page de commande avec les informations de livraison et les options de paiement.
+L'utilisateur remplit les informations nécessaires (adresse de livraison, méthode de paiement) et confirme.
+Le système envoie les informations au service de paiement pour traiter le paiement.
+Le service de paiement renvoie la confirmation du paiement au système.
+Le système confirme la commande auprès de l’utilisateur et envoie un email de confirmation.
+2. Diagramme de Séquence : Gérer un Produit (Admin)
+Acteurs :
+
+Admin : Gère le stock et les informations des articles.
+Système : Gère les données des produits et le stockage.
+Description des étapes :
+Admin se connecte et accède au tableau de bord de gestion.
+Admin choisit l’option d’ajouter/modifier/supprimer un article.
+Le système demande les détails du produit (nom, prix, description, etc.).
+Admin entre les informations requises et valide.
+Le système enregistre les modifications dans la base de données.
+Le système confirme l'ajout/modification/suppression du produit.
+Diagramme de Séquence : Ajouter un Avis
+Acteurs :
+
+Utilisateur : Souhaite laisser un avis sur un produit.
+Système : Gère les avis et la modération.
+Description des étapes :
+Utilisateur consulte l’historique des commandes et sélectionne un produit pour laisser un avis.
+Le système affiche le formulaire d’avis.
+Utilisateur entre un commentaire et une note, puis soumet l’avis.
+Le système enregistre l’avis en attente de validation.
+Admin consulte les avis en attente et valide ou rejette l’avis.
+Le système met à jour l'état de l’avis (publié ou rejeté).
+Utilisateur voit l’avis affiché sur la page du produit si approuvé.
+	
+Pour construire un site web d'accessoires avec des fonctionnalités de recherche, panier et gestion de compte, vous pouvez utiliser Java en back-end pour gérer les données et les interactions avec la base de données. Voici comment Java peut vous aider pour chaque fonctionnalité :
+
+Recherche : Avec Java (en utilisant des frameworks comme Spring Boot ou servlets), vous pouvez écrire des requêtes pour chercher dans la base de données en fonction des mots-clés saisis par l'utilisateur. Par exemple, une requête peut renvoyer des accessoires qui correspondent à un nom, une catégorie, ou une description. Java s'occupera de traiter la requête et de renvoyer les résultats.
+
+Panier : Java peut gérer les sessions des utilisateurs pour conserver les articles ajoutés dans le panier. Les articles peuvent être stockés temporairement dans une base de données ou en mémoire, associés à chaque utilisateur jusqu'à ce qu'ils passent à l'achat.
+
+Compte utilisateur : Java peut également gérer les inscriptions, les connexions et les informations des utilisateurs. Vous pouvez enregistrer les données des utilisateurs dans une base de données, vérifier leurs identifiants, et assurer une authentification sécurisée pour que seuls les utilisateurs enregistrés puissent accéder à leur compte et à leur historique d'achat.
+
+Base de données : Pour stocker les informations, comme les produits, les utilisateurs, les commandes, etc., une base de données relationnelle comme MySQL est souvent utilisée. Avec Java, vous pouvez connecter cette base de données à l'aide de JDBC ou d'autres bibliothèques pour effectuer des opérations de lecture et d'écriture.
+
+En bref, Java est un excellent choix pour le back-end de votre site car il peut gérer la logique, les sessions, et l’interaction avec la base de données pour les fonctionnalités de recherche, panier, et compte utilisateur.

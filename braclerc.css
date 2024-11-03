@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #746767;
+    color: rgb(47, 36, 36);
+    padding: 15px 20px;
+}
+
+a{
+    text-decoration: none;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: rgb(245, 243, 243);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.nav-links a:hover{
+    color: #121212;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #746767;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+.dropdown {
+    position: relative; /* Nécessaire pour le positionnement absolu de dropdown-menu */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Affiché au survol */
+    z-index: 10; /* Assurez-vous qu'il soit au-dessus d'autres éléments */
+}
+
+
+.dropdown-menu li a {
+    color: rgb(246, 245, 245);
+    background-color:#746767;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+   
+    color: #121212;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(247, 242, 242);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+
+
+.header-right a {
+    color: rgb(245, 242, 242);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.header-right a:hover {
+    color: #201e1e;
+}
+
+#bracelets {
+    padding: 40px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+#bracelets h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.bracelets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.bracelet-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.bracelet-item:hover {
+    transform: scale(1.05);
+}
+
+.bracelet-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.bracelet-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.bracelet-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.bracelet-item .price {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}

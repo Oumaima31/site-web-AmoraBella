@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="comptec.css">
+</head>
+<body>
+    <div class="account-modal">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'login')" id="defaultOpen">S'identifier</button>
+            <button class="tablinks" onclick="openTab(event, 'register')">S'inscrire</button>
+        </div>
+    
+        <!-- Formulaire de connexion -->
+<div id="login" class="tabcontent">
+    <h2>CONNECTEZ-VOUS À VOTRE COMPTE</h2>
+    <form>
+        <input type="email" placeholder="Adresse e-mail" required>
+        <input type="password" placeholder="Mot de passe" required>
+        <div class="remember-forgot">
+            <label><input type="checkbox"> Souviens-toi de moi</label>
+            <a href="#">Mot de passe oublié</a>
+        </div>
+        <div class="button-group">
+            <button type="submit">S'IDENTIFIER</button>
+            <button type="button" onclick="closeModal()">ANNULER</button>
+        </div>
+        <p>Pas de compte? <a href="#" onclick="openTab(event, 'register')">Créer en ici</a></p>
+    </form>
+</div>
+
+<!-- Formulaire d'inscription -->
+<div id="register" class="tabcontent">
+    <h2>NOUVEAU COMPTE</h2>
+    <form>
+        <input type="text" placeholder="Prénom" required>
+        <input type="text" placeholder="Nom de famille" required>
+        <input type="email" placeholder="Adresse e-mail" required>
+        <input type="password" placeholder="Mot de passe" required>
+        <label><input type="checkbox" required> J'accepte les termes.</label>
+        <div class="button-group">
+            <button type="submit">CRÉER UN COMPTE</button>
+            <button type="button" onclick="closeModal()">ANNULER</button>
+        </div>
+        <p>Vous avez déjà un compte? <a href="#" onclick="openTab(event, 'login')">Connectez-vous ici</a></p>
+    </form>
+</div>
+
+    </div>
+    <script>
+         function closeModal() {
+        // Ferme la modale en masquant le conteneur de la modale
+        document.querySelector('.account-modal').style.display = 'none';
+        // Redirige vers la page index.html si nécessaire
+        window.location.href = 'index.html'; 
+    }
+        function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Par défaut, ouvrir l'onglet "S'identifier"
+document.getElementById("defaultOpen").click();
+
+    </script>
+</body>
+</html>

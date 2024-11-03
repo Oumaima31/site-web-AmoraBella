@@ -1,0 +1,86 @@
+/* Style général */
+.account-modal {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Onglets */
+.tab {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between; /* Espace entre les boutons */
+}
+
+.tab button {
+    background-color: #ddd;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    width: 49%; /* Réduit la largeur pour créer un espace */
+    font-size: 14px;
+    font-weight: bold;
+    color: #392f2f;
+}
+
+.tab button:hover, .tab button.active {
+    background-color: #463e3e;
+    color: white;
+}
+
+/* Contenu des onglets */
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.tabcontent h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Champs de formulaire */
+.tabcontent form input[type="text"],
+.tabcontent form input[type="email"],
+.tabcontent form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Conteneur pour aligner les boutons côte à côte */
+.button-group {
+    display: flex;
+    gap: 10px; /* Espace entre les boutons */
+    margin-top: 10px;
+}
+
+.button-group button {
+    flex: 1; /* Assure que les boutons occupent la même largeur */
+    padding: 10px;
+    background-color: #685858;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    background-color: #352f2f;
+}
+
+/* Section "Souviens-toi de moi" et "Mot de passe oublié" */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 10px 0;
+}
