@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="baguesdet.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>AmoraBella</h1>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#shop">Shop</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="boucles.html">Boucles d'oreilles</a></li>
+                            <li><a href="collier.html">Colliers</a></li>
+                            <li><a href="bracler.html">Bracelets</a></li>
+                            <li><a href="montre.html">Montres</a></li>
+                            <li><a href="bagues.html">Bagues</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="header-right">
+                    <form class="search-bar" action="/search" method="get">
+                        <input type="text" placeholder="Rechercher..." name="search">
+                        
+                    </form>
+                    <a href="compte.html">Mon Compte</a>
+                    <a href="#panier">Panier</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="full-width-product">
+        <div class="product-info">
+            <img src="/bagues/ring4.jpg" alt="Bague en or avec diamant">
+            <div class="product-details">
+                <h3>Bague œil doré</h3>
+                <p><strong>Référence:</strong> st1007831</p>
+                <p><h4>Détails :</h4><br>
+                <ul>
+                    <li><strong>Style :</strong> Élégant, mystique</li>
+                    <li><strong>Utilisation :</strong> Quotidien, occasions spéciales</li>
+                </ul></p>
+                <h2>44,90TND</h2>
+                <div class="product-purchase">
+                    <div class="quantity-container">
+                        <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                        <input type="text" id="quantity" value="1" readonly>
+                        <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">AJOUTER AU PANIER</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+ <script>
+    function increaseQuantity() {
+    const quantityInput = document.getElementById('quantity');
+    let quantity = parseInt(quantityInput.value);
+    quantityInput.value = quantity + 1;
+}
+
+function decreaseQuantity() {
+    const quantityInput = document.getElementById('quantity');
+    let quantity = parseInt(quantityInput.value);
+    if (quantity > 1) {
+        quantityInput.value = quantity - 1;
+    }
+}
+
+ </script>   
+</body>
+</html>
